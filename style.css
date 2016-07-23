@@ -5,16 +5,17 @@ html {
 }
 body {
 	display: flex;
-	flex-direction: column;
 	width: 100%;
+	flex-direction: column;
 	font-family: sans-serif;
 }
 /* Navbar styles */
 nav {
 	display: flex;
-	width: 100%;
 	background-color: #FFB4B0;
 	height: 60px;
+	border: 2px solid black;
+	margin: 1em;
 }
 
 body {
@@ -23,8 +24,13 @@ body {
 
 nav ul {
 	display: inline-flex;
-	list-style: none;
-	
+	list-style: none;	
+}
+nav ul li:before {
+content: " | ";
+}
+nav li:first-child:before {
+content: none;
 }
 nav ul li a {
 	color: blue;
@@ -41,10 +47,8 @@ nav ul li.selected a {
 .container {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
 	margin: 0;
 	height: 100%;
-	flex-grow: 1 0 auto;
 }
 .sidebar {
 	display: flex;
@@ -53,6 +57,8 @@ nav ul li.selected a {
 	background-color: #4DD7FA;
 	padding: 1em;
     font-size: 1.2em;
+    margin: 1em;
+    border: 2px solid black;
 }
 
 .sidebar .options {
@@ -71,8 +77,8 @@ nav ul li.selected a {
 }
 .sidebar button {
 	height: 40px;
-	border-radius: 1em;
-    background-color: white;
+	border-radius: 0.5em;
+    background-color: lightgrey;
     border: 2px solid black;
     margin: 1em;
     font-size: 1em;
@@ -84,6 +90,8 @@ nav ul li.selected a {
 	background-color: #FEFAC0; 
 	flex-direction: column;
 	padding: 2em;
+	margin: 1em;
+    border: 2px solid black;
 }
 section h1 {
 	margin: 0;
@@ -98,10 +106,15 @@ section ul {
 	margin: 0;
 	padding: 0;
 }
-
 section ul li {
 	font-size: 1.1em;
     margin-right: 15px;
+}
+section ul li:before {
+content: " | ";
+}
+section li:first-child:before {
+content: none;
 }
 /* Add Music Styles */
 .newmusic {
