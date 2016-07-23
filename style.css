@@ -1,3 +1,14 @@
+/* Body styles */
+html {
+	display: flex;
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-family: sans-serif;
+}
 /* Navbar styles */
 nav {
 	display: flex;
@@ -21,24 +32,19 @@ nav ul li a {
 	padding: 0.5em;
 }
 
-nav ul li a:active {
+nav ul li.selected a {
 	color: black;
 	text-decoration: none;
 }
 
-/* Body styles */
-body {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	font-family: sans-serif;
-}
 /*Sidebar styles */
 .container {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	margin: 0;
+	height: 100%;
+	flex-grow: 1 0 auto;
 }
 .sidebar {
 	display: flex;
@@ -96,4 +102,40 @@ section ul {
 section ul li {
 	font-size: 1.1em;
     margin-right: 15px;
+}
+/* Add Music Styles */
+.newmusic {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	flex-direction: column;
+}
+.newmusic form {
+	display: flex;
+	flex-direction: column;
+    width: 30em;
+    margin: 5em;
+    margin-bottom: 1em;
+}
+input[type=text] {
+    border: 2px solid black;
+    margin: 0.5em;
+    height: 2em;
+    float: right;
+    width: 18em;
+}
+.newmusic button {
+	width: 10em;
+    height: 2em;
+    background-color: lightgrey;
+    border-radius: 0.5em;
+    border: 2px solid black;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.formstyle {
+	display: inline-flex;
+    width: 20em;
+    align-items: center;
+    justify-content: space-between;
 }
