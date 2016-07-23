@@ -1,0 +1,40 @@
+/* Navbar styles */
+nav {
+	display: flex;
+	width: 100%;
+	background-color: #FFB4B0;
+	height: 60px;
+}
+
+body {
+	margin: 0;
+}
+
+nav ul {
+	display: inline-flex;
+	list-style: none;
+	
+}
+nav ul li a {
+	color: blue;
+	text-decoration: underline;
+	padding: 0.5em;
+}
+
+nav ul li a:active {
+	color: black;
+	text-decoration: none;
+}
+
+/* Body styles */
+body {
+	display: flex;
+	flex-direction: row;
+}
+/*Sidebar styles */
+.sidebar {
+	display: flex;
+	flex-basis: 30%;
+	background-color: #4DD7FA;
+
+}

@@ -6,16 +6,25 @@
   <title>Music History</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
 <nav>
 	<ul>
-		<li><a href="" title="">View Music</a></li>
-		<li><a href="">Add Music</a></li>
-		<li><a href="">Profile</a></li>
+		<li><a href="#">View Music</a></li>
+		|
+		<li><a href="#">Add Music</a></li>
+		|
+		<li><a href="#">Profile</a></li>
 	</ul>
 </nav>
-<div class="sidebar"></div>
+<div class="sidebar">
+	<label for="length">Some length</label>
+	<input type="range" min="0" max="100" value="50" id="length">
+	<label for="artist">Artist:</label>
+	<select name="artist" >
+		<option value="" disabled selected>Options</option>
+		<option value="Drake">Drake</option>
+	</select>
+</div>
 <div class="main"></div>
 </body>
 </html>
