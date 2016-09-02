@@ -1,3 +1,4 @@
+var mainContent = document.getElementById("mainContent");
 var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -11,10 +12,28 @@ songs.push("Retro > by Childish Gambino");
 console.log(songs);
 var newSongs = songs.toString();
 newSongs = newSongs.replace(/[>]/gi, "-");
-newSongs = newSongs.replace(/[@]/gi, "a");
-newSongs = newSongs.replace(/[*!(]/gi, "");
-console.log(newSongs);
+newSongs = newSongs.replace(/[*!(@]/gi, "");
+songSplit = newSongs.split(",");
+for (var song in songSplit) {
+	mainContent.innerHTML += "<li>" + songSplit[song] + "</li>";
+}
 
+/*for (var i = 0; i < songSplit.length; i++) {
+	main.innerHTML += "<li>" + songSplit[i] + "</li>";
+	
+}
+
+
+Use JavaScript arrays, loops, and innerHTML to show the music you love.
+
+Students must use JavaScript to create a list of songs in the index.html file for their Music History project. Have them download the songs.js file, which contains an array of strings with song information.
+
+Each student must add one song to the beginning and the end of the array.
+Loop over the array and remove any words or characters that obviously don't belong.
+Students must find and replace the > character in each item with a - character.
+Must add each string to the DOM in index.html in the main content area.
+
+{Song name} by {Artist} on the album {Album}*/
 /*var songsSplit = newSongs.split(",") 
 console.log(songsSplit);
 var song = "";
