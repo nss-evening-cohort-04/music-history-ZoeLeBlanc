@@ -9,13 +9,20 @@
 <body>
 <nav>
 	<ul>
-		<li class="selected"><a href="index.html">View Music</a></li>
-		
-		<li><a href="addmusic.html">Add Music</a></li>
-		
-		<li><a href="#">Profile</a></li>
+
+		<!-- <li><a href="#" id="link-home">Home</a></li> -->
+		<li><a href="" id="list-view">List Music</a></li>
+		<li><a href="#" id="add-view">Add Music</a></li>
+
 	</ul>
 </nav>
+
+<!-- 
+<section id="home-view">
+  Home
+</section> -->
+<!-- List Music View -->
+<section class="visible" id="list-view-anchor">
 <!-- Sidebar -->
 <div class="container">
 <div class="sidebar">
@@ -55,41 +62,27 @@
 	</div>
 	<button type="submit">Filter</button>
 </div>
-<!-- Main Content -->
-<div class="main">
-	<section>
-		<h1>Alexander Hamilton</h1><br>
-		<ul>
-			<li>Hamilton Musical </li> 
-			<li>Hamilton Musical </li> 
-			<li>Rock, Pop, Hip Hop</li>
-		</ul>
-	</section>
-	<section>
-		<h1>My Shot</h1><br>
-		<ul>
-			<li>Hamilton Musical</li> 
-			<li>Hamilton Musical</li> 
-			<li>Rock, Pop, Hip Hop</li>
-		</ul>
-	</section>
-	<section>
-		<h1>The Schulyer Sisters</h1><br>
-		<ul>
-			<li>Hamilton Musical</li> 
-			<li>Hamilton Musical</li> 
-			<li>Rock, Pop, Hip Hop</li>
-		</ul>
-	</section>
-	<section>
-		<h1>Satisifed</h1><br>
-		<ul>
-			<li>Hamilton Musical</li> 
-			<li>Hamilton Musical</li> 
-			<li>Rock, Pop, Hip Hop</li>
-		</ul>
-	</section>
+
+  <!-- Main Content -->
+<div id="mainContent">
+
+
 </div>
+
+<!-- Add Music View -->
+<section class="hidden" id="add-view-anchor">
+  <div id="userMusic">
+  	 <input type="text" name="" id="user-song" placeholder="Enter a song">
+  	 <input type="text" name="" id="user-artist" placeholder="Enter the artist">
+  	 <input type="text" name="" id="user-album" placeholder="Enter the album">
+  	 <button type="submit" id="addMusic">Add Music</button>
+  </div>
+</section>
+
+
+
 </div>
 </body>
+<script src="songs.js" type="text/javascript" charset="utf-8" async defer></script>
+<script type="text/javascript" src="DOMHandler.js"></script>
 </html>
