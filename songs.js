@@ -1,4 +1,6 @@
 var mainContent = document.getElementById("mainContent");
+var addMusicBtn = document.getElementById("addMusic");
+var listMusicBtn = document.getElementById("list-view");
 var songs = [];
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
@@ -9,72 +11,43 @@ songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little
 
 songs.unshift("What a Fool Believes > by the Doobie Brothers");
 songs.push("Retro > by Childish Gambino");
-console.log(songs);
-var newSongs = songs.toString();
-newSongs = newSongs.replace(/[>]/gi, "-");
-newSongs = newSongs.replace(/[*!(@]/gi, "");
-songSplit = newSongs.split(",");
-for (var song in songSplit) {
-	mainContent.innerHTML += "<li>" + songSplit[song] + "</li>";
-}
 
-/*for (var i = 0; i < songSplit.length; i++) {
-	main.innerHTML += "<li>" + songSplit[i] + "</li>";
-	
-}
+var userSong = document.getElementById("user-song");
+var userArtist = document.getElementById("user-artist");
+var userAlbum = document.getElementById("user-album");
+addMusicBtn.addEventListener("click", function(event){
+	console.log(userSong.value);
+	console.log(userArtist.value);
+	console.log(userAlbum.value);
+	var userInput = `${userSong.value} by ${userArtist.value} on ${userAlbum.value}`;
+	songs.push(userInput);
+	console.log(songs);
+});
 
+userAlbum.addEventListener("keypress", function(event){
+	if (event.keyCode == 13){
+		console.log(userSong.value);
+		console.log(userArtist.value);
+		console.log(userAlbum.value);
+		var userInput = `${userSong.value} by ${userArtist.value} on ${userAlbum.value}`;
+		songs.push(userInput);
+		console.log(songs);
+	}
+});
 
-Use JavaScript arrays, loops, and innerHTML to show the music you love.
+function listMusic(){
+	mainContent.innerHTML = "";
+	var newSongs = songs.toString();
+	console.log(newSongs);
+	newSongs = newSongs.replace(/[>]/gi, "-");
+	newSongs = newSongs.replace(/[*!(@]/gi, "");
+	songSplit = newSongs.split(",");
+	for (var song in songSplit) {
+		mainContent.innerHTML += "<ul><li>" + songSplit[song] + "</li></ul>";
+	}
+};
+listMusicBtn.addEventListener("click", function(event){
+	listMusic();
+});
 
-Students must use JavaScript to create a list of songs in the index.html file for their Music History project. Have them download the songs.js file, which contains an array of strings with song information.
-
-Each student must add one song to the beginning and the end of the array.
-Loop over the array and remove any words or characters that obviously don't belong.
-Students must find and replace the > character in each item with a - character.
-Must add each string to the DOM in index.html in the main content area.
-
-{Song name} by {Artist} on the album {Album}*/
-/*var songsSplit = newSongs.split(",") 
-console.log(songsSplit);
-var song = "";
-//object??
-for (var i = 0; i < songsSplit.length; i++) {
-	song = songsSplit[i];
-	console.log(song);
-}
-var songsSplitAgain = song.split("by") 
-var artist = "";
-for (var i = 0; i < songsSplitAgain.length; i++) {
-	artist = songsSplitAgain[i];
-	console.log(artist);
-}
-*/
-
-//newSongs.split("on");
-//newSongs = newSongs.split("-");
-
-
-
-//newSongs = newSongs.replace(addDash, "-").replace(removeChar, "");
-
-//cleanSongs = newSongs.replace(/\W/g, "");
-//songs[i] = document.getElementbyId("main").innerHTML;
-//use .map on songs to get index to create new array
-
-//newSongs = newSongs.split("by").split("on");
-//console.log(newSongs);
-
-
-//var album =
-
-/*
-Use JavaScript arrays, loops, and innerHTML to show the music you love.
-
-Students must use JavaScript to create a list of songs in the index.html file for their Music History project. Have them download the songs.js file, which contains an array of strings with song information.
-
-Each student must add one song to the beginning and the end of the array.
-Loop over the array and remove any words or characters that obviously don't belong.
-Students must find and replace the > character in each item with a - character.
-Must add each string to the DOM in index.html in the main content area.
-
-{Song name} by {Artist} on the album {Album}*/
+listMusic();

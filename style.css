@@ -84,7 +84,7 @@ nav ul li.selected a {
     font-size: 1em;
 }
 /*Main styles */
-#main {
+#mainContent {
 	display: flex;
 	flex-basis: 70%;
 	background-color: #FEFAC0; 
@@ -93,7 +93,18 @@ nav ul li.selected a {
 	margin: 1em;
     border: 2px solid black;
 }
-section h1 {
+#mainContent ul {
+	display: inline-flex;
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+#mainContent li {
+	font-size: 1.1em;
+    margin-right: 15px;
+}
+/*section h1 {
 	margin: 0;
 	padding: 0;
 	padding-top: 1em;
@@ -115,9 +126,20 @@ content: " | ";
 }
 section li:first-child:before {
 content: none;
-}
+}*/
 /* Add Music Styles */
-.newmusic {
+.hidden {
+	display: none;
+}
+.visible {
+	display: flex;
+}
+#add-view-anchor {
+    justify-content: center;
+    padding: 1em;
+    margin: 1em;
+}
+/*.newmusic {
 	display: flex;
 	margin-right: auto;
 	margin-left: auto;
@@ -151,4 +173,4 @@ input[type=text] {
     width: 20em;
     align-items: center;
     justify-content: space-between;
-}
+}*/
